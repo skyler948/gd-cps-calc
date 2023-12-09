@@ -9,8 +9,8 @@ def calculateTotalTime(blocks, speed):
 
     return totalTime
 
-print("For calculating CPS in GD. This calculator assumes your in-game speed, total clicks, cps, and fps are constant.")
-totalClicks = int(input("Input total # of clicks in a block segment: "))
+print("For calculating CPS in GD. This calculator assumes your in-game speed, total clicks, cps, and fps are constant.\nRemember to use e+, not *10^ when inputting large numbers.")
+totalClicks = float(input("\nInput total # of clicks in a block segment: "))
 totalBlocks = float(input("Input total # of blocks traveled: "))
 ingameSpeed = float(input("Input in-game speed (0.5, 1, 2, 3, 4): "))
 
