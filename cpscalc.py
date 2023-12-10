@@ -9,10 +9,14 @@ def calculateTotalTime(blocks, speed):
 
     return totalTime
 
-print("For calculating CPS in GD. This calculator assumes your in-game speed, total clicks, cps, and fps are constant.\nRemember to use e+, not *10^ when inputting large numbers.\n")
+print("For calculating CPS in GD. This calculator assumes your in-game speed, total clicks, cps, and fps are constant.\n")
 while (True):
     try:
-        totalClicks = float(input("Input total # of clicks in a block segment: "))
+        totalClicks = input("Input total # of clicks in a block segment: ")
+        # Used to convert *10^ to e+
+        totalClicks = totalClicks.replace("*10^", "e+")
+        totalClicks = totalClicks.replace("x10^", "e+")
+        totalClicks = float(totalClicks)
     except:
         print("Input valid float.")
     else:
