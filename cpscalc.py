@@ -23,7 +23,11 @@ while (True):
         break
 while (True):
     try:
-        totalBlocks = float(input("Input total # of blocks traveled: "))
+        totalBlocks = input("Input total # of blocks traveled: ")
+        # Used to convert *10^ to e+
+        totalBlocks = totalBlocks.replace("*10^", "e+")
+        totalBlocks = totalBlocks.replace("x10^", "e+")
+        totalBlocks = float(totalBlocks)
     except:
         print("Input valid float.")
     else:
@@ -42,5 +46,6 @@ ingameSpeed = int(ingameSpeed)
 gameTime = [8.372, 10.386, 12.914, 15.600, 19.200]
 
 totalTime = calculateTotalTime(totalBlocks, gameTime[ingameSpeed])
+totalUnits = totalBlocks * 30
 cps = calculateCPS(totalClicks, totalTime)
-print("\nCPS: " + str(cps) + "\nFPS Required: " + str(cps*2) + "\nIn " + str(totalTime) + " seconds.")
+print("\nCPS: " + str(cps) + "\nFPS Required: " + str(cps*2) + "\nIn " + str(totalTime) + " seconds (" + str(totalUnits) + " units).")
