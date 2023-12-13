@@ -9,6 +9,7 @@ def calculateTotalTime(blocks, speed):
 
     return totalTime
 
+print("This version of the program is DEPRECIATED now! Consider using the better C++ version.")
 print("For calculating CPS in GD. This calculator assumes your in-game speed, total clicks, cps, and fps are constant.\n")
 gameTime = [8.372, 10.386, 12.914, 15.600, 19.200]
 
